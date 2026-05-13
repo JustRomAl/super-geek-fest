@@ -478,68 +478,264 @@ button {
     width: 250px;
 }
 
-@media (max-width: 768px) {
-    nav {
-        justify-content: space-between;
-        position: relative;
-        display: block;
-        padding-top: clamp(15px, 4vw, 25px);
+@media (max-width: 1280px) {
+    .last::after {
+        right: -5vw
     }
-    nav::before {
-        content: "Меню";
-        font-size: clamp(18px, 4vw, 24px);
-        font-weight: 500;
-        color: black;
-        cursor: pointer;
-        display: inline-block;
-        padding: 10px 0;
-        background: white;
-        z-index: 20;
-        position: relative;
+}
+
+@media (max-width: 1120px) {
+    .last::after {
+        width: 230px;
+        right: -3vw
+    }
+    .promo_main::before {
+        width: 230px;
+        left: -4vw;
+    }
+    .img-wrap1::after,
+    .events-bottom::after {
+        width: 230px;
+        left: 2vw;
+    }
+}
+
+@media (max-width:920px) {
+    nav,
+    main,
+    .promo {
+        max-width: 920px;
+    }
+    .promo {
+        grid-template-columns: repeat(3, 30vw);
+    }
+    .promo_img {
+        max-width: 95vw;
+    }
+    .comicon_img {
+        max-width: 270px;
+    }
+    .promo_quote::before,
+    .promo_quote::after {
+        font-size: 80px;
+        bottom: 20%;
+    }
+    .promo_quote {
+        font-size: 38px;
+        left: 3%;
+    }
+    .logos img {
+        width: 200px;
+    }
+    .logos {
+        gap: 5px
+    }
+    .img-wrap1::after,
+    .events-bottom::after {
+        top: 150px
+    }
+}
+
+@media (max-width: 768px) {
+    nav,
+    main,
+    .promo {
+        max-width: 768px;
+    }
+    .title {
+        font-size: 70px;
+    }
+    .promo_quote {
+        font-size: 30px;
+        max-width: 700px;
+    }
+    .promo_quote::before,
+    .promo_quote::after {
+        font-size: 65px;
+        bottom: 28%;
+    }
+    .last::after {
+        width: 200px;
+        right: -2vw;
+        bottom: -85px;
+    }
+    .promo_main::before {
+        width: 200px;
+        left: -4vw;
+    }
+    .events-bottom::after {
+        width: 200px;
+        left: 3vw;
+        top: 200px;
+    }
+    .img-wrap1::after {
+        top: 120px;
+        width: 200px;
+        left: 4vw;
+    }
+    .logos img {
+        width: 192px;
+    }
+    .logos {
+        gap: 0px;
+        grid-template-columns: repeat(4, 190px);
+    }
+}
+
+@media (max-width: 576px) {
+    nav,
+    main,
+    .promo {
+        max-width: 576px;
+    }
+    .promo {
+        grid-template-rows: 180px 200px;
+        gap: 15px 18px
+    }
+    .title {
+        font-size: 50px;
+    }
+    .promo_quote::before,
+    .promo_quote::after {
+        font-size: 55px;
+        bottom: 35%;
+    }
+    .promo_quote {
+        font-size: 26px;
+        max-width: 520px;
+    }
+    .promo_main::before {
+        width: 150px;
+        left: -4vw;
+        top: -50px
+    }
+    .last::after {
+        width: 150px;
+        right: -2vw;
+        bottom: -100px;
     }
     .menu {
-        display: none;
-        position: absolute;
-        top: clamp(60px, 12vw, 80px);
-        left: 0;
-        width: 100%;
-        background: white;
-        flex-direction: column;
-        justify-content: flex-start;
-        padding: 20px;
-        gap: 15px;
-        box-shadow: 0 5px 19px -4px rgba(147, 115, 115, 0.2);
-        z-index: 15;
+        gap: 20px;
+        font-size: 17px;
     }
-    nav:hover .menu {
-        display: flex;
+    .comicon_img {
+        max-height: 200px;
     }
-    .menu li {
-        width: 100%;
-        text-align: center;
+    .promo_text h2 {
+        font-size: 20px;
     }
-    .menu li a {
-        display: block;
-        padding: 12px 20px;
-        font-size: clamp(16px, 4vw, 20px);
-        font-weight: 500;
-        border-radius: 12px;
+    .content-wrap {
+        font-size: 18px;
     }
-    .menu li a:hover {
-        background: #f5f5f5;
+    .content-wrap h2 {
+        font-weight: 600;
+        font-size: 30px;
+    }
+    .img-wrap1::after {
+        top: 100px;
+        width: 150px;
+        left: 7vw;
+    }
+    .events-bottom::after {
+        width: 150px;
+        left: 7vw;
+        top: 230px;
+    }
+    .logos img {
+        width: 145px;
+    }
+    .logos {
+        gap: 0px;
+        grid-template-columns: repeat(4, 145px);
     }
 }
 
 @media (max-width: 480px) {
+    nav,
+    main,
+    .promo {
+        max-width: 480px;
+    }
+    .promo_quote {
+        font-size: 22px;
+        max-width: 430px;
+    }
+    .promo_quote::before,
+    .promo_quote::after {
+        font-size: 35px;
+        bottom: 60%;
+    }
+    .promo_text h2 {
+        margin-top: 20px;
+    }
+    .events-container {
+        grid-template-columns: repeat(2, 220px);
+        gap: 20px;
+    }
+    .input-field {
+        height: 50px;
+        width: 220px;
+    }
+    .input-field.full-width {
+        width: 460px;
+    }
     .menu {
-        padding: 15px;
         gap: 10px;
+        font-size: 15px;
     }
-    .menu li a {
-        padding: 10px 15px;
-        font-size: 16px;
+    .content-wrap button {
+        height: 60px;
+        width: 210px;
     }
-    nav::before {
-        font-size: 20px;
+    .fields {
+        column-gap: 20px;
+    }
+    .logos img {
+        width: 120px;
+    }
+    .logos {
+        gap: 0px;
+        grid-template-columns: repeat(4, 120px);
+    }
+    .last::after {
+        width: 140px;
+        right: 0vw;
+        bottom: -100px;
+    }
+    .events-bottom::after {
+        width: 140px;
+        left: 7vw;
+        top: 230px;
+    }
+    .img-wrap1::after {
+        top: 100px;
+        width: 130px;
+        left: 10vw;
+    }
+    .promo_main::before {
+        width: 140px;
+        left: -4vw;
+        top: -50px
     }
 }
+
+
+/* 1920 */
+
+
+/* 1280 */
+
+
+/* 1120 */
+
+
+/* 992 */
+
+
+/* 768 */
+
+
+/* 576 */
+
+
+/* 480 */
