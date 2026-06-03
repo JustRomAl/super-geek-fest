@@ -211,18 +211,33 @@ main {
     flex-direction: column;
 }
 
-.card-img-1 {
+.card-img-container-1 {
     width: 330px;
+    height: 300px;
+    margin-bottom: 15px;
+}
+
+.card-img-1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+    border-radius: 15px;
+}
+
+.card-img-container-2 {
+    width: 705px;
     height: 300px;
     border-radius: 15px;
     margin-bottom: 15px;
 }
 
 .card-img-2 {
-    width: 705px;
-    height: 300px;
     border-radius: 15px;
-    margin-bottom: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
 }
 
 .events-bottom {
@@ -249,18 +264,34 @@ main {
     }
 }
 
-.card-img-3 {
+.card-img-container-3 {
     width: 705px;
     height: 300px;
     border-radius: 15px;
     margin-bottom: 15px;
 }
 
-.card-img-4 {
+.card-img-3 {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-img-container-4 {
     width: 330px;
     height: 300px;
     border-radius: 15px;
     margin-bottom: 15px;
+}
+
+.card-img-4 {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .card-content h3 {
@@ -316,18 +347,28 @@ img {
     height: auto;
 }
 
+.img-wrap1 {
+    height: 384px;
+    width: 535px;
+}
+
+.img-wrap2 {
+    height: 384px;
+    width: 535px;
+}
+
 .img-wrap2 img {
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 20px;
-    display: block;
+    object-fit: cover;
 }
 
 .img-wrap1 img {
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 20px;
-    display: block;
+    object-fit: cover;
 }
 
 .content-wrap {
@@ -534,6 +575,29 @@ button {
     .events-bottom::after {
         top: 150px
     }
+    .card-img-container-1,
+    .card-img-container-4 {
+        width: 30vw;
+        height: 250px;
+    }
+    .card-img-container-2,
+    .card-img-container-3 {
+        width: 60vw;
+        height: 250px;
+    }
+    .img-wrap1,
+    .img-wrap2 {
+        width: 45vw;
+        height: 300px;
+    }
+    .img-wrap1::after {
+        width: 190px;
+        left: 5vw;
+    }
+    .events-bottom::after {
+        width: 180px;
+        left: 5vw;
+    }
 }
 
 @media (max-width: 768px) {
@@ -556,21 +620,22 @@ button {
     }
     .last::after {
         width: 200px;
-        right: -2vw;
+        right: -1vw;
         bottom: -85px;
     }
     .promo_main::before {
         width: 200px;
         left: -4vw;
+        top: -40px;
     }
     .events-bottom::after {
-        width: 200px;
+        width: 175px;
         left: 3vw;
-        top: 200px;
+        top: 150px;
     }
     .img-wrap1::after {
-        top: 120px;
-        width: 200px;
+        top: 180px;
+        width: 170px;
         left: 4vw;
     }
     .logos img {
@@ -611,7 +676,7 @@ button {
     }
     .last::after {
         width: 150px;
-        right: -2vw;
+        right: -10vw;
         bottom: -100px;
     }
     .menu {
@@ -632,14 +697,14 @@ button {
         font-size: 30px;
     }
     .img-wrap1::after {
-        top: 100px;
+        top: 200px;
         width: 150px;
         left: 7vw;
     }
     .events-bottom::after {
         width: 150px;
         left: 7vw;
-        top: 230px;
+        top: 180px;
     }
     .logos img {
         width: 145px;
@@ -647,6 +712,66 @@ button {
     .logos {
         gap: 0px;
         grid-template-columns: repeat(4, 145px);
+    }
+    .promo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .comicon_img {
+        height: 100%;
+        width: 100%;
+    }
+    .promo_text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .right_text {
+        margin-bottom: -130px;
+        margin-top: -50px;
+    }
+    .left_text {
+        margin-bottom: 20px;
+    }
+    .events-top,
+    .events-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-img-container-1,
+    .card-img-container-4,
+    .card-img-container-3,
+    .card-img-container-2,
+    .img-wrap1,
+    .img-wrap2 {
+        width: 100%;
+    }
+    .card-img-container-4 {
+        height: 400px;
+    }
+    .events-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .fields {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .input-field {
+        height: 60px;
+        width: 100%;
+    }
+    .roles {
+        display: grid;
+        grid-template-columns: repeat(2, 50vw);
+        grid-template-rows: repeat(2, 30px);
+    }
+    .submit-btn {
+        height: 55px;
     }
 }
 
@@ -668,24 +793,24 @@ button {
     .promo_text h2 {
         margin-top: 20px;
     }
+    .right_text {
+        margin-bottom: -60px;
+        margin-top: 0px;
+    }
+    .left_text {
+        margin-bottom: 20px;
+    }
     .events-container {
         grid-template-columns: repeat(2, 220px);
         gap: 20px;
     }
     .input-field {
         height: 50px;
-        width: 220px;
-    }
-    .input-field.full-width {
-        width: 460px;
+        width: 100%;
     }
     .menu {
         gap: 10px;
         font-size: 15px;
-    }
-    .content-wrap button {
-        height: 60px;
-        width: 210px;
     }
     .fields {
         column-gap: 20px;
@@ -699,16 +824,16 @@ button {
     }
     .last::after {
         width: 140px;
-        right: 0vw;
+        right: -10vw;
         bottom: -100px;
     }
     .events-bottom::after {
-        width: 140px;
+        width: 120px;
         left: 7vw;
-        top: 230px;
+        top: 180px;
     }
     .img-wrap1::after {
-        top: 100px;
+        top: 220px;
         width: 130px;
         left: 10vw;
     }
